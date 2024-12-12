@@ -22,7 +22,7 @@ jobs:
       - name: Generate PDF
         run: python exec/print.py
       - name: Upload PDF as artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: plot.pdf
-        path: exec/plot.pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: plot.pdf
+          path: exec/plot.pdf
