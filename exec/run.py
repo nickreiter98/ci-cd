@@ -16,7 +16,7 @@ def store_scatter_plot(df):
     plt.ylabel('Sepal Width (cm)')
     plt.title('Iris Dataset: Sepal Length vs Sepal Width')
     plt.legend()
-    plt.savefig('scatter_plot.png')
+    plt.savefig('exec/scatter_plot.png')
 
 if __name__ == '__main__':
     df = get_data_set()

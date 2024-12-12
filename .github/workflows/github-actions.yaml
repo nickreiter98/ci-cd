@@ -17,3 +17,12 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: python test.py
+      - name: Download data
+        run: python exec/run.py
+      - name: Generate PDF
+        run: python exec/print.py
+      - name: Upload PDF as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: plot.pdf
+        path: exec/plot.pdf
