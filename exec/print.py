@@ -9,7 +9,7 @@ def create_pdf():
     pdf.set_font('Arial', 'B', 24)
     pdf.cell(0, 10, 'Beautiful Plot', 0, 1, 'C')
     pdf.image('exec/scatter_plot.png', x=20, y=20, w=200, h=150)
-    pdf.output('plot.pdf', 'F')
+    pdf.output('exec/plot.pdf', 'F')
 
 if __name__ == '__main__':
     create_pdf()
