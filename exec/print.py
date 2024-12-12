@@ -1,5 +1,6 @@
 from PIL import Image
 from fpdf import FPDF
+import datetime
 
 
 def create_pdf():
@@ -7,7 +8,8 @@ def create_pdf():
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font('Arial', 'B', 24)
-    pdf.cell(0, 10, 'Beautiful Plot', 0, 1, 'C')
+    today = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    pdf.cell(0, 10, f'Beautiful Plot {today}', 0, 1, 'C')
     pdf.image('exec/scatter_plot.png', x=20, y=20, w=200, h=150)
     pdf.output('exec/plot.pdf', 'F')
 
